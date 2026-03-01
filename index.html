@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+    <!--BOOTSTAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--FIM BOOTSTAP ICONS-->
+    <!--EmailJS-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!--FIM EmailJS-->
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <title>SodreSoftwares</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo-header">
+                <img class="logo" src="images/logoSodreDev.png" alt="Logo do portifolio do Site">
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#formulario">Contato</a></li>
+                </ul>
+            </nav><!--menu-desktop-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div><!--btn-abrir-menu-->
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div><!--btn-fechar-->
+
+                <nav>
+                    <ul>
+                        <li><a href="">Início</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Projetos</a></li>
+                        <li><a href="#portfolio">Projetos</a></li>
+                    </ul>
+                </nav>
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+            <div class="btn-contato">
+                <a href="#formulario"><button>Contato</button></a>
+            </div><!--btn-contato-->
+        </div> <!--interface-->
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+                        <p>criatividade e inovação andam lado a lado. Tentando entregar sempre
+                            o melhor código junto da melhor performe, pois os dois tem que andar sempre lado a lado, um
+                            bom Back, sempre
+                            tem seu End, ou seja seu fim </p>
+
+                        <div class="btn-contato">
+                            <a href="#formulario"><button>Entre em contato</button>
+                            </a>
+                        </div><!--btn-contato-->
+                    </div><!--txt-topo-sie-->
+
+                    <div class="img-topo-site">
+                        <img src="images/personagemm.webp" alt="foto da pessoa do portifolio">
+                    </div><!--img-topo-site-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <section class="especialidades" id="especialidades">
+            <div class="interface">
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="carrossel">
+                    <div class="grupo-logos">
+                        <div class="logos"><!--java-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--spring-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--SQL-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg" />
+                        </div>
+                        <div class="logos"><!--Docker-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--AWS-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--HTML-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        </div>
+                        <div class="logos"><!--GitHub-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+                        </div>
+                    </div> <!--grupos-logos-->
+                    <div class="grupo-logos">
+                        <div class="logos"><!--java-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--spring-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--SQL-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg" />
+                        </div>
+                        <div class="logos"><!--Docker-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--AWS-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" />
+                        </div>
+                        <div class="logos"><!--HTML-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        </div>
+                        <div class="logos"><!--GitHub-->
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+                        </div>
+                    </div> <!--grupos-logos-->
+                </div><!--caroseel-->
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-filetype-json"></i>
+                        <h3>Back-End Java</h3>
+                        <p>Desenvolvimento de back-end com Spring Boot (APIs REST, validação) e Java Web (Servlets, JSP,
+                            JDBC). Integração com PostgreSQL e SQL Server, modelagem e exposição de endpoints para
+                            aplicações web.</p>
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <i class="bi bi-database-fill"></i>
+                        <h3>Banco de Dados & Integrações</h3>
+                        <p>Modelagem e manipulação de banco de dados relacionais utilizando PostgreSQL e SQL Server.
+                            Experiência com JDBC, consultas SQL, integração com APIs e ambientes em nuvem (AWS RDS).</p>
+                    </div><!--especialidades-box-->
+                    <div class="especialidades-box">
+                        <i class="bi bi-cloudy-fill"></i>
+                        <h3>Deploy & Cloud</h3>
+                        <p>Containerização de aplicações com Docker, configuração de ambientes, deploy em AWS e
+                            gerenciamento de banco de dados em nuvem.</p>
+                    </div><!--especialidades-box-->
+                </div><!---flex-->
+            </div><!--interface-->
+        </section><!--especialidades-->
+
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="images/personagemm.webp" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <span>SOU DANIEL SODRÉ.</span></h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, qui. Alias sint, pariatur
+                            odit temporibus incidunt dignissimos delectus eaque hic animi sequi minima ipsam architecto
+                            recusandae inventore similique, aut eligendi.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam beatae iusto tempore neque,
+                            illo tenetur voluptas. Modi itaque at, officiis vel ullam cumque. Laborum ex delectus quas
+                            quidem praesentium soluta.</p>
+                        <div class="btn-social">
+                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="#"><button><i class="bi bi-git"></i></button></a>
+                        </div><!--btn-social-->
+                    </div><!--txt-sobre-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--sobre-->
+
+        <section class="portfolio" id="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(images/Encurtador-Capa.png);" onclick="abrirModal('modalProjeto1')">
+                        <div class="overlay">Projeto 1</div>
+                    </div>
+                    <!-- Modal Projeto -->
+                    <div id="modalProjeto1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="fecharModal('modalProjeto1')">&times;</span>
+                            <h2 class="titulo">Encurtador <span>de URL Serverless</span></h2>
+                            <img src="images/encurtador-url-diagrama.png" alt="Diagrama Arquitetura" class="modal-img">
+                            <p>
+                                Aplicação serverless construída com AWS S3, API Gateway e Lambda.
+                                Permite encurtar URLs e redirecionar utilizando WebsiteRedirectLocation do S3.
+                            </p>
+                            <a href="https://github.com/daniel-sd03/encurtador-url" target="_blank" class="btn">Ver no GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/personagemm.webp);">
+                        <div class="overlay">Projeto 2</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/personagemm.webp);">
+                        <div class="overlay">Projeto 3</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--portfolio-->
+
+        <section class="formulario" id="formulario">
+            <div class="interface">
+                <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+                <form>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <input type="text" name="celular" id="celular" placeholder="Seu celular:">
+                    <textarea name="textarea" id="textarea" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div><!--interface-->
+        </section><!--formulario-->
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img class="logo" src="images/logoSodreDev.png" alt="Logo do portifolio do Site">
+                    </div><!--logo-footer-->
+                    <div class="btn-social">
+                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="#"><button><i class="bi bi-git"></i></button></a>
+                    </div><!--btn-social-->
+                </div><!--flex-->
+            </div><!--line-footer-->
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:dsodre2003@gmail.com">dsodre2003@gmail.com</a>
+                </p>
+            </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+</body>
+
+</html>
