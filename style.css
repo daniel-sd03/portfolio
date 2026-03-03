@@ -367,19 +367,30 @@ section.portfolio .flex {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #7d7d7d;
+    border-radius: 10px;
 }
 
 .modal-content {
-    background: #1e1d1d;
+    background: rgb(90, 90, 90);
     color: #fff;
     width: 80%;
     max-width: 800px;
-    margin: 5% auto;
+    margin: 3% auto;
     padding: 30px;
     border-radius: 12px;
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
+    max-height: 90vh;   
+    overflow-y: auto;
 }
 
 .modal-img {
@@ -397,6 +408,11 @@ section.portfolio .flex {
 
 .modal a{
     color: var(--cor-primaria);   
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
 }
 
 @keyframes fadeIn {

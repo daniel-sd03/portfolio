@@ -1,10 +1,12 @@
 //SOBREPOSIÇÃO PORTFOLIO
 function abrirModal(id) {
     document.getElementById(id).style.display = "block";
+    document.body.classList.add("no-scroll");
 }
 
 function fecharModal(id) {
     document.getElementById(id).style.display = "none";
+    document.body.classList.remove("no-scroll"); 
 }
 
 document.addEventListener("DOMContentLoaded", function () {
