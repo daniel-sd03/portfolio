@@ -214,10 +214,66 @@
                             <span class="close" onclick="fecharModal('modalProjeto1')">&times;</span>
                             <h2 class="titulo">Encurtador <span>de URL Serverless</span></h2>
                             <img src="images/encurtador-url-diagrama.png" alt="Diagrama Arquitetura" class="modal-img">
-                            <p>
-                                Aplicação serverless construída com AWS S3, API Gateway e Lambda.
-                                Permite encurtar URLs e redirecionar utilizando WebsiteRedirectLocation do S3.
-                            </p>
+                            <div class="modal-text">
+
+                                <h2 class="titulo">Visão <span>Geral</span></h2>
+                                <p>
+                                    Aplicação serverless de encurtamento de URLs desenvolvida com Java 21 e serviços
+                                    gerenciados da AWS. O sistema permite gerar links curtos e realizar redirecionamento
+                                    automático utilizando recursos nativos do S3.
+                                </p>
+
+                                <h2 class="titulo">Arquite<span>tura</span></h2>
+                                <p>
+                                    A solução utiliza Amazon S3 como Static Website Hosting para o frontend,
+                                    API Gateway para expor a API HTTP e AWS Lambda para processar a criação
+                                    das URLs encurtadas. O redirecionamento final é realizado diretamente
+                                    pelo S3 através da propriedade WebsiteRedirectLocation.
+                                </p>
+
+                                <h2 class="titulo">Tecnologias <span>Utilizadas</span></h2>
+                                <p>
+                                    • Java 21 <br>
+                                    • AWS Lambda <br>
+                                    • Amazon S3 (Static Website) <br>
+                                    • API Gateway (HTTP API) <br>
+                                    • Arquitetura Serverless
+                                </p>
+
+                                <h2 class="titulo">Decisões <span>Técnicas</span></h2>
+
+                                <p>
+                                    O redirecionamento das URLs foi implementado utilizando a propriedade
+                                    <strong>WebsiteRedirectLocation</strong> do Amazon S3, permitindo que o próprio
+                                    S3 execute o redirecionamento HTTP. Dessa forma, evita-se uma nova execução
+                                    da Lambda no momento do acesso ao link encurtado, reduzindo latência e custo
+                                    operacional dentro do modelo serverless.
+                                </p>
+                                <br>
+                                <p>
+                                    A geração da chave curta é baseada em hash <strong>SHA-256</strong> da URL original,
+                                    garantindo comportamento determinístico (mesma URL gera o mesmo hash) e boa
+                                    distribuição dos códigos gerados. Como apenas uma parte do hash é utilizada
+                                    para compor a URL curta, colisões ainda podem ocorrer, sendo tratadas
+                                    posteriormente no processo de gravação no S3.
+                                </p>
+                                <br>
+                                <p>
+                                    Para evitar colisões, foi implementada uma estratégia progressiva no tamanho da chave:
+                                    o sistema inicia com 3 bytes do hash e, em caso de conflito, aumenta
+                                    gradualmente o tamanho da chave até um limite máximo. Essa abordagem equilibra
+                                    legibilidade da URL e garantia de unicidade.
+                                </p>
+                                <br>
+                                <p>
+                                    Na criação dos objetos S3 foi utilizado o header <strong>If-None-Match</strong>
+                                    no <strong>PutObjectRequest</strong>, assegurando que objetos já existentes
+                                    não sejam sobrescritos. O tratamento específico do erro HTTP 412
+                                    (Precondition Failed) permite identificar colisões de forma segura,
+                                    mantendo comportamento idempotente.
+                                </p>
+                                <br>
+                            </div>
                             <a href="https://github.com/daniel-sd03/encurtador-url" target="_blank" class="btn">Ver no GitHub</a>
                         </div>
                     </div>
