@@ -398,6 +398,13 @@ section.portfolio .flex {
     margin: 20px 0;
 }
 
+.modal-text h2{
+    padding: 30px;
+}
+.modal-text h3{
+    margin-bottom: 5px;
+}
+
 .close {
     position: absolute;
     right: 20px;

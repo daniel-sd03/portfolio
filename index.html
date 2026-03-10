@@ -70,10 +70,10 @@
                     <div class="txt-topo-site">
                         <h1>DESENVOLVEDOR JAVA BACK-END<span>.</span></h1>
                         <p>
-                                Estudante de Ciência da Computação com foco em desenvolvimento backend. 
-                                Desenvolvo aplicações utilizando Java, Spring Boot e banco de dados, 
-                                aplicando boas práticas de programação e arquitetura de software. 
-                                Também possuo conhecimentos em DevOps, utilizando ferramentas como AWS e Docker.
+                            Estudante de Ciência da Computação com foco em desenvolvimento backend.
+                            Desenvolvo aplicações utilizando Java, Spring Boot e banco de dados,
+                            aplicando boas práticas de programação e arquitetura de software.
+                            Também possuo conhecimentos em DevOps, utilizando ferramentas como AWS e Docker.
                         </p>
 
                         <div class="btn-contato">
@@ -188,24 +188,24 @@
                     <div class="txt-sobre">
                         <h2>MUITO PRAZER, <span>SOU DANIEL SODRÉ.</span></h2>
                         <p>
-                        Sou estudante de Ciência da Computação e apaixonado por tecnologia e desenvolvimento
-                        de software. Tenho focado meus estudos principalmente no desenvolvimento backend
-                        utilizando Java e o ecossistema Spring.
-                        <br>
-                        <br>       
-                        Durante minha jornada venho desenvolvendo projetos práticos para aplicar conceitos
-                        de programação, arquitetura de software e boas práticas de desenvolvimento. 
-                        Tenho experiência na criação de APIs e aplicações web utilizando Java, Spring Boot
-                        e banco de dados relacionais.
-                        <br>
-                        <br>
-                        Também possuo conhecimentos em tecnologias de cloud e DevOps, utilizando ferramentas
-                        como AWS e Docker para deploy e gerenciamento de aplicações.
-                        <br>
-                        <br>
-                        Atualmente estou em busca da minha primeira oportunidade como desenvolvedor,
-                        onde eu possa continuar evoluindo tecnicamente, colaborar em projetos reais
-                        e contribuir com soluções eficientes.
+                            Sou estudante de Ciência da Computação e apaixonado por tecnologia e desenvolvimento
+                            de software. Tenho focado meus estudos principalmente no desenvolvimento backend
+                            utilizando Java e o ecossistema Spring.
+                            <br>
+                            <br>
+                            Durante minha jornada venho desenvolvendo projetos práticos para aplicar conceitos
+                            de programação, arquitetura de software e boas práticas de desenvolvimento.
+                            Tenho experiência na criação de APIs e aplicações web utilizando Java, Spring Boot
+                            e banco de dados relacionais.
+                            <br>
+                            <br>
+                            Também possuo conhecimentos em tecnologias de cloud e DevOps, utilizando ferramentas
+                            como AWS e Docker para deploy e gerenciamento de aplicações.
+                            <br>
+                            <br>
+                            Atualmente estou em busca da minha primeira oportunidade como desenvolvedor,
+                            onde eu possa continuar evoluindo tecnicamente, colaborar em projetos reais
+                            e contribuir com soluções eficientes.
                         </p>
                         <div class="btn-social">
                             <a href="https://www.linkedin.com/in/danielsodre" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-linkedin"></i></button></a>
@@ -220,10 +220,9 @@
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(images/Encurtador-Capa.png);" onclick="abrirModal('modalProjeto1')">
+                    <div class="img-port" style="background-image: url(images/encurtador-url-capa-portfolio.png);" onclick="abrirModal('modalProjeto1')">
                         <div class="overlay">Projeto 1</div>
-                    </div>
-                    <!-- Modal Projeto -->
+                    </div><!--img-port-->
                     <div id="modalProjeto1" class="modal">
                         <div class="modal-content">
                             <span class="close" onclick="fecharModal('modalProjeto1')">&times;</span>
@@ -274,7 +273,8 @@
                                 </p>
                                 <br>
                                 <p>
-                                    Para evitar colisões, foi implementada uma estratégia progressiva no tamanho da chave:
+                                    Para evitar colisões, foi implementada uma estratégia progressiva no tamanho da
+                                    chave:
                                     o sistema inicia com 3 bytes do hash e, em caso de conflito, aumenta
                                     gradualmente o tamanho da chave até um limite máximo. Essa abordagem equilibra
                                     legibilidade da URL e garantia de unicidade.
@@ -288,16 +288,101 @@
                                     mantendo comportamento idempotente.
                                 </p>
                                 <br>
-                            </div>
-                            <a href="https://github.com/daniel-sd03/encurtador-url" target="_blank" class="btn">Ver no GitHub</a>
-                        </div>
-                    </div>
-                    <div class="img-port" style="background-image: url(images/personagemm.webp);">
+                                <a href="https://github.com/daniel-sd03/encurtador-url" target="_blank" class="btn">Ver no GitHub</a>
+                            </div><!--modal-text-->
+                        </div><!--modal-content-->
+                    </div><!--modalProjeto1-->
+                    <div class="img-port" style="background-image: url(images/gerador-cpf-capa-portfolio.png);" onclick="abrirModal('modalProjeto2')">
                         <div class="overlay">Projeto 2</div>
-                    </div>
+                    </div><!--img-port-->
+                    <div id="modalProjeto2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="fecharModal('modalProjeto2')">&times;</span>
+                            <h2 class="titulo">Gerador <span>de CPF</span></h2>
+                            <img src="images/gerador-cpf-diagrama.svg" alt="Diagrama Arquitetura" class="modal-img">
+                            <div class="modal-text">
+                                <h2 class="titulo">Visão <span>Geral</span></h2>
+                                <p>
+                                    Aplicação web e API desenvolvida com <strong>Spring Boot</strong> e
+                                    <strong>Thymeleaf</strong> para
+                                    geração e validação de CPFs. O sistema oferece geração aleatória, geração por
+                                    estado, geração personalizada
+                                    (informando os 9 primeiros dígitos) e validação/correção automática dos dígitos
+                                    verificadores.
+                                    O projeto demonstra competências em desenvolvimento back-end, segurança básica,
+                                    persistência e integração com templates.
+                                </p>
+
+                                <h2 class="titulo">Arquite<span>tura</span></h2>
+                                <p>
+                                    Aplicação estruturada em camadas (Controller → Service → Repository) usando Spring
+                                    Boot. A camada de apresentação
+                                    utiliza templates Thymeleaf (páginas de cadastro, login e geração de CPF). A
+                                    persistência é feita com JPA/Hibernate
+                                    e PostgreSQL. A autenticação e controle de acesso são tratados por Spring Security.
+                                </p>
+
+                                <h2 class="titulo">Tecnologias <span>Utilizadas</span></h2>
+                                <p>
+                                    • Java (17+) <br>
+                                    • Spring Boot (Web, Security) <br>
+                                    • Thymeleaf (templates) <br>
+                                    • JPA / Hibernate <br>
+                                    • PostgreSQL <br>
+                                    • Maven
+                                </p>
+
+                                <h2 class="titulo">Endpoints e <span>Páginas</span></h2>
+                                <h3>• Páginas Thymeleaf:</h3>
+                                <p>
+                                    <strong>/cadastro</strong> — página de cadastro de usuários <br>
+                                    <strong>/login</strong> — página de login <br>
+                                    <strong>/</strong> — página de geração de CPF (formulário principal) <br>
+                                  
+                                </p>
+                                <br>
+                                <h3> • Endpoints de formulário (POST):</h3>
+                                <p>
+                                    <strong>/salvarUsuario</strong> — salva novo usuário (após cadastro) <br>
+                                    <strong>/gerar-cpf-aleatorio</strong> — gera ou valida CPF baseado no botão do form (parâmetro "acao") <br>
+
+                                </p>
+
+                                <h2 class="titulo">Decisões <span>Técnicas</span></h2>
+                                <p>
+                                    A aplicação usa Thymeleaf para renderizar páginas server-side quando a necessidade é
+                                    de páginas simples
+                                    de cadastro/login e fluxo rápido de protótipo. Isso facilita integração entre
+                                    back-end e UI sem criar um front separado.
+                                </p>
+                                <br>
+                                <p>
+                                    A lógica de geração/validação do CPF foi isolada em
+                                    <strong>GeradorCpfService</strong>, promovendo reutilização e testabilidade.
+                                    Regras de negócio e validações ficam no Service; Controllers apenas expõem endpoints
+                                    e templates, seguindo a separação de responsabilidades.
+                                </p>
+                                <br>
+                                <p>
+                                    Para autenticação é utilizado Spring Security com configuração central em
+                                    <strong>WebConfigSecurity</strong>,
+                                    garantindo rotas protegidas (p. ex. página de gerar CPF disponível apenas para
+                                    usuários autenticados) e tratamento básico de sessões.
+                                </p>
+                                <br>
+                                <p>
+                                    Usuários são persistidos com JPA através de <strong>UsuarioRepository</strong>,
+                                    permitindo futuras melhorias como logs de uso,
+                                    limite de geração por usuário ou auditoria.
+                                </p>
+                                <br>
+                                <a href="https://github.com/daniel-sd03/gerador-cpf" target="_blank" class="btn">Ver no GitHub</a>
+                            </div><!--modal-text-->       
+                        </div><!--modal-content-->
+                    </div><!--modalProjeto2-->
                     <div class="img-port" style="background-image: url(images/personagemm.webp);">
                         <div class="overlay">Projeto 3</div>
-                    </div>
+                    </div><!--img-port-->
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--portfolio-->
