@@ -263,6 +263,7 @@
                                     • Spring Boot <br>
                                     • Spring Security <br>
                                     • JWT (Auth0) <br>
+                                    • Docker & Docker Compose (Infraestrutura) <br>
                                     • Redis (Cache) <br>
                                     • Swagger / OpenAPI (Documentação) <br>
                                     • WebClient <br>
@@ -319,6 +320,13 @@
                                 </p>
 
                                 <h2 class="titulo">Decisões <span>Técnicas</span></h2>
+                                <p>
+                                    Para garantir um ambiente de desenvolvimento padronizado e fácil de replicar, toda a infraestrutura 
+                                    de banco de dados (PostgreSQL) e cache (Redis) foi conteinerizada utilizando <strong>Docker Compose</strong>.
+                                    Graças ao suporte nativo do Spring Boot 3, os contêineres são orquestrados automaticamente na inicialização 
+                                    da aplicação, eliminando a necessidade de configurações manuais complexas.
+                                </p>
+                                <br>
                                 <p>
                                     O uso de JWT permite uma arquitetura stateless, eliminando sessões e facilitando a escalabilidade.
                                     A separação entre Client e Service melhora a organização e testabilidade da aplicação.
