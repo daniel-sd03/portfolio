@@ -406,11 +406,20 @@ section.portfolio .flex {
 }
 
 .close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
+    position: sticky;
+    float: right;
+    top: 0px;
     font-size: 30px;
     cursor: pointer;
+    color: #000000;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 .modal a{
