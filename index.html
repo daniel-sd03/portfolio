@@ -26,7 +26,7 @@
     <header>
         <div class="interface">
             <div class="logo-header">
-                <img class="logo" src="images/logoSodreDev.png" alt="Logo do portifolio do Site">
+                <img class="logo" src="images/logoSodreDev.webp" alt="Logo do portifolio do Site">
             </div><!--logo-->
 
             <nav class="menu-desktop">
@@ -220,14 +220,135 @@
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(images/encurtador-url-capa-portfolio.png);" onclick="abrirModal('modalProjeto1')">
+                    <div class="img-port" style="background-image: url('images/api-government-capa-portfolio.webp');" onclick="abrirModal('modalProjeto01')">
+                        <div class="overlay">Projeto 3</div>
+                    </div><!--img-port-->
+                    <div id="modalProjeto01" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="fecharModal('modalProjeto01')">&times;</span>
+                            <h2 class="titulo">Government <span>API (Integração IBGE)</span></h2>
+                            <img src="images/api-government-diagrama.webp" alt="Diagrama Arquitetura" class="modal-img">
+                            <div class="modal-text">
+                                <h2 class="titulo">Visão <span>Geral</span></h2>
+                                <p>
+                                    Aplicação back-end desenvolvida com <strong>Spring Boot</strong> que integra dados públicos da API do IBGE,
+                                    oferecendo uma camada segura, performática e resiliente para consumo dessas informações.
+                                    O sistema implementa <strong>autenticação com JWT</strong>, <strong>cache com Redis</strong> e
+                                    <strong>tratamento padronizado de erros</strong>, garantindo acesso controlado e otimização de chamadas externas.
+                                </p>
+                                
+                                <h2 class="titulo">Arquite<span>tura</span></h2>
+                                <p>
+                                    A aplicação segue uma arquitetura em camadas (Controller → Service → Client → API Externa).
+                                    O fluxo inclui autenticação via JWT, validação de requisições por filtro de segurança,
+                                    verificação de cache no Redis e consumo da API do IBGE através de um client dedicado.
+                                </p>
+                                <h2 class="titulo">Principais <span>Endpoints</span></h2>
+                                <p>
+                                    A API expõe rotas claras e padronizadas seguindo os princípios REST. 
+                                    Abaixo estão os recursos disponíveis para consumo:
+                                </p>
+                                <br>
+                                <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6; margin-bottom: 15px;">
+                                    <li><strong>GET /states</strong> — Retorna a lista de todos os estados brasileiros (UFs).</li>
+                                    <li><strong>GET /regioes</strong> — Retorna as macrorregiões do país (Norte, Sul, etc).</li>
+                                    <li><strong>GET /states/{uf}/municipalities</strong> — Retorna todos os municípios de um estado específico.</li>
+                                    <li><strong>GET /municipalities</strong> — Retorna a lista completa de todos os municípios do Brasil.</li>
+                                    <li><strong>GET /municipalities/search?name={nome}</strong> — Busca e filtra municípios dinamicamente por parte do nome.</li>
+                                </ul>
+
+                                <h2 class="titulo">Tecnologias <span>Utilizadas</span></h2>
+                                <p>
+                                    • Java (17+) <br>
+                                    • Spring Boot <br>
+                                    • Spring Security <br>
+                                    • JWT (Auth0) <br>
+                                    • Redis (Cache) <br>
+                                    • Swagger / OpenAPI (Documentação) <br>
+                                    • WebClient <br>
+                                    • PostgreSQL <br>
+                                    • JUnit 5 / Mockito
+                                </p>
+
+                                <h2 class="titulo">Seguran<span>ça</span></h2>
+                                <p>
+                                    A autenticação é baseada em <strong>JWT</strong>, utilizando abordagem stateless.
+                                    O usuário realiza login e recebe um token que deve ser enviado nas requisições.
+                                    Um filtro customizado intercepta as requisições, valida o token, recupera o usuário
+                                    e registra a autenticação no contexto do Spring.
+                                </p>
+                                <p>
+                                    A configuração de segurança define rotas públicas (login e registro), protege endpoints
+                                    com base em roles e retorna respostas padronizadas para acessos não autorizados.
+                                </p>
+
+                                <h2 class="titulo">Integração com <span>IBGE</span></h2>
+                                <p>
+                                    A comunicação com a API externa é feita através do <strong>IbgeClient</strong>, utilizando
+                                    <strong>WebClient</strong>. O sistema consome dados detalhados do IBGE, abrangendo 
+                                    <strong>estados, regiões e municípios</strong>. Além de realizar a conversão segura para DTOs da aplicação, a integração permite listagens completas e buscas dinâmicas (como filtrar cidades pelo nome ou por sigla de estado), mantendo toda essa complexidade totalmente desacoplada da regra de negócio.
+                                </p>
+
+                                <h2 class="titulo">Documenta<span>ção</span></h2>
+                                <p>
+                                    A API foi totalmente documentada utilizando <strong>Swagger (Springdoc OpenAPI)</strong>. 
+                                    A interface interativa do Swagger UI não apenas detalha todos os endpoints, parâmetros e schemas, 
+                                    mas também serve como um mini-portfólio embutido, exibindo a visão geral da arquitetura e as decisões técnicas diretamente na página inicial da documentação.
+                                </p>
+
+                                <h2 class="titulo">Cache com <span>Redis</span></h2>
+                                <p>
+                                    Para otimizar performance, foi implementado cache com Redis utilizando <strong>@Cacheable</strong>.
+                                    As respostas da API do IBGE são armazenadas por 1 dia, reduzindo latência e evitando chamadas
+                                    repetidas ao serviço externo.
+                                </p>
+
+                                <h2 class="titulo">Tratamento de <span>Erros</span></h2>
+                                <p>
+                                    A aplicação utiliza exceções customizadas (<strong>ApiException</strong>) e um handler global
+                                    (<strong>GlobalExceptionHandler</strong>) para padronizar respostas de erro.
+                                    São tratados cenários como falhas de comunicação, erros da API externa e respostas vazias.
+                                </p>
+
+                                <h2 class="titulo">Testes <span>Automatizados</span></h2>
+                                <p>
+                                    Foram implementados testes unitários e de camada web utilizando <strong>JUnit</strong>,
+                                    <strong>Mockito</strong> e <strong>MockMvc</strong>.
+                                    Os testes cobrem cenários de sucesso e erro, garantindo o correto funcionamento dos endpoints,
+                                    regras de negócio e tratamento de exceções.
+                                </p>
+
+                                <h2 class="titulo">Decisões <span>Técnicas</span></h2>
+                                <p>
+                                    O uso de JWT permite uma arquitetura stateless, eliminando sessões e facilitando a escalabilidade.
+                                    A separação entre Client e Service melhora a organização e testabilidade da aplicação.
+                                    O Redis foi adotado para reduzir dependência da API externa e melhorar performance.
+                                </p>
+                                <br>
+                                <p>
+                                    A implementação de um filtro customizado de segurança oferece maior controle sobre autenticação,
+                                    enquanto o tratamento global de exceções garante respostas consistentes para os consumidores da API.
+                                </p>
+                                <br>
+                                <p>
+                                    Uma decisão técnica de destaque foi o uso de <strong>Auto-injeção (Self-Injection com @Lazy)</strong> para contornar a 
+                                    limitação de chamadas internas (self-invocation) dos proxies do Spring Cache. Isso foi essencial no <code>IbgeService</code>, 
+                                    onde o método de filtro de municípios precisava invocar a listagem completa cacheada sem acionar a API externa novamente e 
+                                    sem causar um loop de dependência circular na inicialização do projeto.
+                                </p>
+                                <br>
+                                <a href="https://github.com/daniel-sd03/government-data-api" target="_blank" class="btn">Ver no GitHub</a>
+                            </div><!--modal-text-->       
+                        </div><!--modal-content-->
+                    </div><!--modalProjeto01-->
+                    <div class="img-port" style="background-image: url(images/encurtador-url-capa-portfolio.webp);" onclick="abrirModal('modalProjeto02')">
                         <div class="overlay">Projeto 1</div>
                     </div><!--img-port-->
-                    <div id="modalProjeto1" class="modal">
+                    <div id="modalProjeto02" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="fecharModal('modalProjeto1')">&times;</span>
+                            <span class="close" onclick="fecharModal('modalProjeto02')">&times;</span>
                             <h2 class="titulo">Encurtador <span>de URL Serverless</span></h2>
-                            <img src="images/encurtador-url-diagrama.png" alt="Diagrama Arquitetura" class="modal-img">
+                            <img src="images/encurtador-url-diagrama.webp" alt="Diagrama Arquitetura" class="modal-img">
                             <div class="modal-text">
 
                                 <h2 class="titulo">Visão <span>Geral</span></h2>
@@ -291,15 +412,15 @@
                                 <a href="https://github.com/daniel-sd03/encurtador-url" target="_blank" class="btn">Ver no GitHub</a>
                             </div><!--modal-text-->
                         </div><!--modal-content-->
-                    </div><!--modalProjeto1-->
-                    <div class="img-port" style="background-image: url(images/gerador-cpf-capa-portfolio.png);" onclick="abrirModal('modalProjeto2')">
+                    </div><!--modalProjeto02-->
+                    <div class="img-port" style="background-image: url(images/gerador-cpf-capa-portfolio.webp);" onclick="abrirModal('modalProjeto03')">
                         <div class="overlay">Projeto 2</div>
                     </div><!--img-port-->
-                    <div id="modalProjeto2" class="modal">
+                    <div id="modalProjeto03" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="fecharModal('modalProjeto2')">&times;</span>
+                            <span class="close" onclick="fecharModal('modalProjeto03')">&times;</span>
                             <h2 class="titulo">Gerador <span>de CPF</span></h2>
-                            <img src="images/gerador-cpf-diagrama.svg" alt="Diagrama Arquitetura" class="modal-img">
+                            <img src="images/gerador-cpf-diagrama.webp" alt="Diagrama Arquitetura" class="modal-img">
                             <div class="modal-text">
                                 <h2 class="titulo">Visão <span>Geral</span></h2>
                                 <p>
@@ -379,10 +500,7 @@
                                 <a href="https://github.com/daniel-sd03/gerador-cpf" target="_blank" class="btn">Ver no GitHub</a>
                             </div><!--modal-text-->       
                         </div><!--modal-content-->
-                    </div><!--modalProjeto2-->
-                    <div class="img-port" style="background-image: url(images/personagemm.webp);">
-                        <div class="overlay">Projeto 3</div>
-                    </div><!--img-port-->
+                    </div><!--modalProjeto03-->
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--portfolio-->
@@ -406,7 +524,7 @@
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
-                        <img class="logo" src="images/logoSodreDev.png" alt="Logo do portifolio do Site">
+                        <img class="logo" src="images/logoSodreDev.webp" alt="Logo do portifolio do Site">
                     </div><!--logo-footer-->
                     <div class="btn-social">
                         <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
