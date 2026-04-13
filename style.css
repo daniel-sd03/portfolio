@@ -202,6 +202,12 @@ section.topo-do-site .flex {
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
+.topo-do-site img{
+    max-width: 100%;
+    height: auto; 
+    display: block;
+}
+
 
 @keyframes flutuar {
     0% {
@@ -309,6 +315,12 @@ section.sobre .flex {
     text-align: justify;
 }
 
+.sobre img{
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    border-radius: 50px;
+}
 
 /* ESTILO DO PORTFÓLIO */
 section.portfolio {
@@ -570,8 +582,12 @@ footer .line-footer p a {
     }
 
     .topo-do-site .img-topo-site img {
-        width: 100%;
+        max-width: 100%;
+        height: auto; 
+        display: block;
+        margin-left: auto;
     }
+    
 
     /* ESPECIALIDADES */
     section.especialidades {
