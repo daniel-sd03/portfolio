@@ -68,12 +68,11 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
-                        <h1>DESENVOLVEDOR JAVA BACK-END<span>.</span></h1>
+                        <h1>SOFTWARE ENGINEER <span>| BACK-END & CLOUD.</span></h1>
                         <p>
-                            Estudante de Ciência da Computação com foco em desenvolvimento backend.
-                            Desenvolvo aplicações utilizando Java, Spring Boot e banco de dados,
-                            aplicando boas práticas de programação e arquitetura de software.
-                            Também possuo conhecimentos em DevOps, utilizando ferramentas como AWS e Docker.
+                            Estudante de Ciência da Computação unindo o desenvolvimento de software robusto (Java/Spring) 
+                            com uma forte visão de infraestrutura e DevOps (AWS/Docker). Desenvolvo APIs seguras, 
+                            arquiteturas escaláveis e soluções em nuvem, sempre com foco em performance e qualidade.
                         </p>
 
                         <div class="btn-contato">
@@ -157,22 +156,20 @@
                 <div class="flex">
                     <div class="especialidades-box">
                         <i class="bi bi-filetype-json"></i>
-                        <h3>Back-End Java</h3>
-                        <p>Desenvolvimento de back-end com Spring Boot (APIs REST, validação) e Java Web (Servlets, JSP,
-                            JDBC). Integração com PostgreSQL e SQL Server, modelagem e exposição de endpoints para
-                            aplicações web.</p>
+                        <h3>Desenvolvimento Back-End</h3>
+                        <p>Construção de APIs RESTful seguras e escaláveis utilizando Java e Spring Boot. Forte base em Programação Orientada a Objetos, testes automatizados (JUnit) e integrações de sistemas.</p>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
-                        <i class="bi bi-database-fill"></i>
-                        <h3>Banco de Dados & Integrações</h3>
-                        <p>Modelagem e manipulação de banco de dados relacionais utilizando PostgreSQL e SQL Server.
-                            Experiência com JDBC, consultas SQL, integração com APIs e ambientes em nuvem (AWS RDS).</p>
-                    </div><!--especialidades-box-->
+                    
                     <div class="especialidades-box">
                         <i class="bi bi-cloudy-fill"></i>
-                        <h3>Deploy & Cloud</h3>
-                        <p>Containerização de aplicações com Docker, configuração de ambientes, deploy em AWS e
-                            gerenciamento de banco de dados em nuvem.</p>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Provisionamento de infraestrutura como código (Terraform), containerização com Docker, automação de esteiras CI/CD (GitHub Actions) e gestão de serviços serverless na AWS.</p>
+                    </div><!--especialidades-box-->
+                    
+                    <div class="especialidades-box">
+                        <i class="bi bi-hdd-network-fill"></i>
+                        <h3>Infraestrutura & Banco de Dados</h3>
+                        <p>Modelagem de bancos relacionais (PostgreSQL/SQL Server). Visão sistêmica de produção apoiada por vivência prática em suporte técnico, redes, Active Directory e troubleshooting avançado.</p>
                     </div><!--especialidades-box-->
                 </div><!---flex-->
             </div><!--interface-->
@@ -184,28 +181,16 @@
                     <div class="img-sobre">
                         <img src="images/daniel-sodre-desenvolvedor.webp" alt="Foto de Daniel Sodré para portfólio de desenvolvedor">
                     </div><!--img-sobre-->
-
                     <div class="txt-sobre">
                         <h2>MUITO PRAZER, <span>SOU DANIEL SODRÉ.</span></h2>
                         <p>
-                            Sou estudante de Ciência da Computação e apaixonado por tecnologia e desenvolvimento
-                            de software. Tenho focado meus estudos principalmente no desenvolvimento backend
-                            utilizando Java e o ecossistema Spring.
-                            <br>
-                            <br>
-                            Durante minha jornada venho desenvolvendo projetos práticos para aplicar conceitos
-                            de programação, arquitetura de software e boas práticas de desenvolvimento.
-                            Tenho experiência na criação de APIs e aplicações web utilizando Java, Spring Boot
-                            e banco de dados relacionais.
-                            <br>
-                            <br>
-                            Também possuo conhecimentos em tecnologias de cloud e DevOps, utilizando ferramentas
-                            como AWS e Docker para deploy e gerenciamento de aplicações.
-                            <br>
-                            <br>
-                            Atualmente estou em busca da minha primeira oportunidade como desenvolvedor,
-                            onde eu possa continuar evoluindo tecnicamente, colaborar em projetos reais
-                            e contribuir com soluções eficientes.
+                            Sou estudante de Ciência da Computação (FUMEC) e apaixonado por tecnologia. Minha grande força como profissional é possuir um <strong>perfil híbrido</strong>: uno a capacidade de criar softwares complexos com o entendimento profundo de como eles operam em servidores e redes reais.
+                            <br><br>
+                            No meu dia a dia, possuo sólida experiência prática em suporte técnico e infraestrutura (Active Directory, conectividade, troubleshooting), o que me dá uma forte visão de produção. 
+                            <br><br>
+                            Em paralelo, dedico-me intensamente à engenharia de software e arquitetura Cloud. Domino o desenvolvimento Back-end com <strong>Java, Spring Boot e bancos de dados relacionais</strong>, além de atuar com ferramentas DevOps, containerização (Docker) e provisionamento de infraestrutura na nuvem (AWS).
+                            <br><br>
+                            Meu objetivo é criar soluções ponta a ponta: desde a escrita de um código limpo e testado, até o seu deploy automatizado e seguro na nuvem.
                         </p>
                         <div class="btn-social">
                             <a href="https://www.linkedin.com/in/danielsodre" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-linkedin"></i></button></a>
@@ -220,6 +205,84 @@
             <div class="interface">
                 <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
+                    <div class="img-port" style="background-image: url('images/click-fila-capa-portfolio.webp');" onclick="abrirModal('modalProjetoClickFila')">
+                        <div class="overlay">Click Fila (SaaS)</div>
+                    </div><!--img-port-->
+                    <div id="modalProjetoClickFila" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="fecharModal('modalProjetoClickFila')">&times;</span>
+                            <h2 class="titulo">Click Fila <span>(SaaS em Produção)</span></h2>
+                            <img src="images/click-fila-diagrama.webp" alt="Diagrama Arquitetura Click Fila" class="modal-img">
+                            <div class="modal-text">
+                                <h2 class="titulo">Visão <span>Geral</span></h2>
+                                <p>
+                                    Plataforma <strong>SaaS multi-tenant</strong> em produção voltada para a gestão inteligente de filas de espera em tempo real para estabelecimentos de serviços (como barbearias e salões). O sistema elimina a necessidade de espera física, permitindo que clientes acompanhem sua posição ao vivo, recebam alertas de proximidade e que os estabelecimentos gerenciem múltiplos profissionais, clientes avulsos (walk-in) e métricas de atendimento.
+                                </p>
+
+                                <h2 class="titulo">Arquite<span>tura</span></h2>
+                                <p>
+                                    Desenvolvida com <strong>Spring Boot</strong> no back-end e <strong>React</strong> no front-end, a aplicação segue uma arquitetura limpa, orientada a eventos e preparada para alta concorrência. A comunicação em tempo real é sustentada por <strong>WebSockets (STOMP)</strong> para atualização instantânea dos painéis e <strong>Web Push Notifications</strong> para alertas em segundo plano nos dispositivos móveis dos clientes.
+                                </p>
+
+                                <h2 class="titulo">Principais <span>Módulos do Sistema</span></h2>
+                                <p>
+                                    Por se tratar de um produto comercial em produção (repositório privado), a API é protegida e dividida nos seguintes domínios de negócio:
+                                </p>
+                                <br>
+                                <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6; margin-bottom: 15px;">
+                                    <li><strong>Motor de Filas em Tempo Real</strong> — Controle de estado da fila (aguardando, chamado, em atendimento, finalizado), realocação inteligente em caso de tolerância excedida e inclusão de clientes presenciais (walk-in).</li>
+                                    <li><strong>Gestão Multi-tenant e Equipes (RBAC)</strong> — Isolamento lógico por empresa, permitindo que proprietários (Owner) e profissionais (Staff) operem com permissões granulares sobre suas respectivas filas.</li>
+                                    <li><strong>Billing e Assinaturas Automatizadas</strong> — Integração com gateway de pagamento (<strong>Asaas</strong>) para cobranças recorrentes via PIX e Cartão de Crédito (com tokenização segura), além de processamento assíncrono via Webhooks.</li>
+                                    <li><strong>Motor de Notificações</strong> — Disparo automatizado de avisos quando chega a vez do cliente, quando ele é o próximo da fila ou quando ocorre realocação.</li>
+                                </ul>
+
+                                <h2 class="titulo">Tecnologias <span>Utilizadas</span></h2>
+                                <p>
+                                    • Java & Spring Boot (Web, Security, Data JPA, WebSocket) <br>
+                                    • React (Front-end SPA) <br>
+                                    • PostgreSQL (Banco de Dados Relacional) <br>
+                                    • Redis (Cache de Alta Performance) <br>
+                                    • Spring Security, JWT & OAuth2 <br>
+                                    • AWS (ECS, ECR, S3) & Docker <br>
+                                    • Terraform (Infraestrutura como Código - IaC) <br>
+                                    • GitHub Actions (Pipeline de CI/CD) <br>
+                                    • JUnit 5, Mockito & AssertJ (Testes Automatizados) <br>
+                                    • Integração API Asaas (Pagamentos e Webhooks)
+                                </p>
+
+                                <h2 class="titulo">Segurança e <span>Permissões</span></h2>
+                                <p>
+                                    A autenticação é stateless baseada em <strong>JWT</strong> e <strong>OAuth2</strong>. Além da proteção no nível de rota, o sistema aplica validações rigorosas de domínio para assegurar que um profissional gerencie apenas seus próprios atendimentos, concedendo prerrogativas de supervisão (override) exclusivamente ao proprietário do estabelecimento. Todo o fluxo financeiro e de dados segue as diretrizes da <strong>LGPD</strong>, sem armazenar dados sensíveis de cartões localmente.
+                                </p>
+
+                                <h2 class="titulo">Performance e <span>Cache com Redis</span></h2>
+                                <p>
+                                    Como a consulta de posição na fila ocorre com altíssima frequência pelos clientes, o estado ativo da sessão é armazenado no <strong>Redis</strong>. Para evitar problemas clássicos de serialização de proxies do Hibernate (LazyInitializationException) no cache, as consultas utilizam projeções otimizadas com <code>JOIN FETCH</code> mapeadas diretamente para DTOs, com invalidação cirúrgica de cache (Cache Eviction) a cada mudança de estado na fila.
+                                </p>
+
+                                <h2 class="titulo">Infraestrutura Cloud e <span>CI/CD</span></h2>
+                                <p>
+                                    Toda a infraestrutura na <strong>AWS</strong> é provisionada como código utilizando <strong>Terraform</strong>, garantindo reprodutibilidade e controle de versão do ambiente. A aplicação roda conteinerizada em clusters <strong>AWS ECS</strong>, integrada a uma esteira de <strong>CI/CD no GitHub Actions</strong> que executa a suíte de testes automatizados, realiza o build da imagem Docker e publica a nova versão em produção sem downtime.
+                                </p>
+
+                                <h2 class="titulo">Decisões <span>Técnicas</span></h2>
+                                <p>
+                                    <strong>Padrão BFF (Backend for Frontend) na Consulta de Status:</strong> Foi desenhado um endpoint unificado que retorna tanto a entrada ativa do usuário quanto seu histórico recente (últimas 24h), priorizando a leitura em memória via Redis e recorrendo ao banco de dados apenas em caso de <em>cache miss</em>.
+                                </p>
+                                <br>
+                                <p>
+                                    <strong>Webhooks Resilientes e Idempotentes:</strong> A recepção de eventos financeiros conta com verificação de duplicidade e estratégia de <em>fallback</em> para conciliação automática de assinaturas, garantindo consistência mesmo em cobranças avulsas ou retentativas do gateway.
+                                </p>
+                                <br>
+                                <p>
+                                    <strong>Testes Unitários Abrangentes:</strong> As regras críticas da máquina de estados da fila e permissões de equipe são cobertas por testes unitários com <strong>JUnit 5 e Mockito</strong>, prevenindo regressões a cada novo deploy.
+                                </p>
+                                <br>
+                                <a href="https://www.clickfila.com.br" target="_blank" class="btn">Acessar Plataforma em Produção</a>
+                            </div><!--modal-text-->       
+                        </div><!--modal-content-->
+                    </div><!--modalProjetoClickFila-->
+
                     <div class="img-port" style="background-image: url('images/api-government-capa-portfolio.webp');" onclick="abrirModal('modalProjeto01')">
                         <div class="overlay">Projeto 3</div>
                     </div><!--img-port-->
