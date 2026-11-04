@@ -335,13 +335,14 @@ section.portfolio .flex {
 
 .img-port {
     width: 360px;
-    height: 460px;
+    height: 432px;
     background-size: cover;
     background-position: 100% 0%;
     transition: 3s;
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    margin: 15px;
 }
 
 .img-port:hover {
